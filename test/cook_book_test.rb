@@ -27,7 +27,7 @@ class CoookBookTest < Minitest::Test
                                   unit: "g",
                                   calories: 75
                                   })
-
+    @pantry = Pantry.new
     @recipe1 = Recipe.new("Mac and Cheese")
     @recipe2 = Recipe.new("Cheese Burger")
     @cookbook = CookBook.new
