@@ -29,4 +29,13 @@ class PantryTest < Minitest::Test
   def test_stock_check
     assert_equal 0, @pantry.stock_check(@ingredient1)
   end
+
+  def test_restock
+    @pantry.restock(@ingredient1, 5)
+    @pantry.restock(@ingredient1, 10)
+    @pantry.restock(@ingredient2, 7)
+    #require 'pry'; binding.pry
+    assert_equal 15, @pantry.stock_check(@ingredient1)
+    assert_equal 7, @pantry.stock_check(@ingredient2)
+  end
 end
