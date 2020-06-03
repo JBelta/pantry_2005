@@ -15,7 +15,11 @@ class Recipe
     @ingredients_required.keys.sum do |ingredient|
       calories += ingredient.calories
     end
-    calories
+    total = 0
+      if @ingredients_required.keys.each{|key| key == key}
+        total =  @ingredients_required.values.sum
+      end
+    calories * total
   end
 
 end

@@ -39,7 +39,6 @@ class RecipeTest < Minitest::Test
     @recipe1.add_ingredient(@ingredient1, 2)
     @recipe1.add_ingredient(@ingredient1, 4)
     @recipe1.add_ingredient(@ingredient2, 8)
-    #require 'pry'; binding.pry
     assert_equal 250, @recipe1.total_calories
   end
 end
