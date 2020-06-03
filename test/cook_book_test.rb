@@ -16,4 +16,8 @@ class CoookBookTest < Minitest::Test
     assert_instance_of CookBook, @cookbook
   end
 
+  def test_it_has_attributes
+    assert_equal [], @cookbook.recipies
+  end
+
 end
