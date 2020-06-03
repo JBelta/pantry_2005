@@ -1,5 +1,6 @@
 require './lib/cook_book'
 require './lib/pantry'
+require './lib/recipe'
 require './lib/ingredient'
 require 'minitest/autorun'
 require 'minitest/pride'
@@ -11,5 +12,8 @@ class CoookBookTest < Minitest::Test
     @cookbook = CookBook.new
   end
 
+  def test_does_it_exist
+    assert_instance_of CookBook, @cookbook
+  end
 
 end
